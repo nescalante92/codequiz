@@ -10,36 +10,29 @@
 </head>
 
 <body>
-    <header>
-        <h1>Marvel Quiz Game</h1>
-    </header>
-
-    <main>
-        <section>
-            <article id="question-con" class="hide">
+    <!-- <h1>Marvel Quiz Game!</h1> add h1 tag -->
+    <main class="container">
+        <section id="questionCon" class="hide">
+            <div id="question"></div>
+            <div id="answerBtn" class="btn-grid">
                 <h2>Test your Knowledge!</h2>
-                <div id="question">Question?</div>
-                <div id="answer-buttons" class="grid"></div>
-                    <button class="btn">A</button>
-                    <button class="btn">B</button>
-                    <button class="btn">C</button>
-                    <button class="btn">D</button>
-            </article>
-            <article>
+                <div id="answerBtn" class="grid"></div>
+                <button class="btn">A</button>
+                <button class="btn">B</button>
+                <button class="btn">C</button>
+                <button class="btn">D</button>
+                </div>
                 <div class="timer">
                     <h3>Time Remaining</h3>
                     <div class="timer-text">
                         <div class="countdown">20</div>
                     </div>
-            </article>
+                </div>
+                <button class="startBtn">Start</button>
+                <script src="script.js"></script>
+            </div>
         </section>
     </main>
-    <footer>
-        <button class="start">Start</button>
-    </footer>
-    <script src="script.js"></script>
-
-
 </body>
 
 </html>
