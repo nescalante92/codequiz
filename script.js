@@ -7,6 +7,8 @@ var btnOne = document.getElementById("btnOne");
 var btnTwo = document.getElementById("btnTwo");
 var btnThree = document.getElementById("btnThree");
 var btnFour = document.getElementById("btnFour");
+var countdown = document.getElementById("countdown");
+var timeLeft = 15;
 var count = 0;
 var quizQuestions = [
     // // ----------Add If statements here
@@ -64,6 +66,7 @@ var quizQuestions = [
 // this function starts the game
 function startGame() {
     showQuestion();
+    setTimer();
 }
 startBtn.addEventListener("click", startGame);
 
@@ -83,22 +86,49 @@ function showQuestion() {
 }
 
 function increaseCount() {
+    console.log(this.textContent);
         count++
     if (count >= quizQuestions.length) {
-        console.log("endgame") // incude end function
+        console.log("endgame")
         endGame()
     } else {
     showQuestion();
     }
+
+}
+
+function corrrectAnswers () { /*add correct answer function*/ 
+    if (quizQuestions[count].correct === correct){
+        showQuestion()
+    } else {
+        timeLeft-- 
+    }
+
 }
 
 btnOne.addEventListener("click",increaseCount);
 btnTwo.addEventListener("click",increaseCount);
 btnThree.addEventListener("click",increaseCount);
 btnFour.addEventListener("click",increaseCount);
+
+function setTimer () {
+    var setTimer = setInterval(function() {
+        timeLeft--;
+        countdown.textContent = timeLeft + "seconds.";
+    
+        if(timeLeft === 0) {
+            clearInterval(setTimer);
+            endGame()
+        }
+
+    }, 1000);
+
+}
     
     
 function endGame() {
+    alert("GAME OVER");
+    console.log("endgame")
 // incude end function
 }
 
