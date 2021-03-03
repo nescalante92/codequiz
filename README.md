@@ -27,13 +27,13 @@ In order to display the proper skills required for this task, a timed quiz is ma
 
 ## Links 
 
-- [Link to Github Profile] ()
+- [Link to Github Profile] (https://github.com/nescalante92/codequiz)
 
-- [Link to Deployed Website] () 
+- [Link to Deployed Website] (https://nescalante92.github.io/codequiz/) 
 ---------------
 
 ## Mockup Image
-![codequiz] ()
+![codequiz](Assests\images\quiz-game-screenshot.png)
 
 ---------------
 
